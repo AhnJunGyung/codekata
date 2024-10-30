@@ -1,0 +1,11 @@
+import Foundation
+
+func solution(_ numbers:[Int]) -> Double {
+    var result: Double = 0
+    
+    for i in numbers{
+        result += Double(i)
+    }
+    
+    return result / Double(numbers.count)
+}
