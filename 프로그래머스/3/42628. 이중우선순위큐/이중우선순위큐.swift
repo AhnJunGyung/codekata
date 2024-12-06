@@ -16,38 +16,33 @@ func solution(_ operations:[String]) -> [Int] {
                 if let number = Int(op) {
                     result.append(number)
                 }
-                
+                break
             } else if value == "D"{
                 op.removeFirst()
                 op.removeFirst()
                 
                 if result.count > 0 {
                     if let number = Int(op) {
-                    // result가 비어있지 않은 경우
-                    // -1일 경우 최소값 삭제 / 1일 경우 최대값 삭제
-                    if number == -1 {
-                        if let minimumValue = result.min() {
-                            if let minimumIndex = result.firstIndex(of: minimumValue) {
-                                result.remove(at: minimumIndex)
+                        // result가 비어있지 않은 경우
+                        // -1일 경우 최소값 삭제 / 1일 경우 최대값 삭제
+                        if number == -1 {
+                            if let minimumValue = result.min() {
+                                if let minimumIndex = result.firstIndex(of: minimumValue) {
+                                    result.remove(at: minimumIndex)
+                                }
                             }
-                        }
-                    } else if number == 1 {
-                        if let maximumValue = result.max() {
-                            if let maximumIndex = result.firstIndex(of: maximumValue) {
-                                result.remove(at: maximumIndex)
+                        } else if number == 1 {
+                            if let maximumValue = result.max() {
+                                if let maximumIndex = result.firstIndex(of: maximumValue) {
+                                    result.remove(at: maximumIndex)
+                                }
                             }
                         }
                     }
                 }
-                    
-                }
-                
-                
+                break
             } 
-            
         }
-        
-    
     }
     
     if result.count == 0 {
