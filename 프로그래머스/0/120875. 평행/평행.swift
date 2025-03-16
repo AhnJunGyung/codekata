@@ -1,5 +1,5 @@
 import Foundation
-
+/*
 func solution(_ dots:[[Int]]) -> Int {
     
     /*
@@ -36,6 +36,20 @@ func solution(_ dots:[[Int]]) -> Int {
     {
         return 1
     }
+    
+    return 0
+}
+*/
+
+func solution(_ dots:[[Int]]) -> Int {
+    
+    func slope(_ a: [Int], _ b: [Int]) -> Double {
+        return Double(b[1] - a[1]) / Double(b[0] - a[0])
+    }
+    
+    if slope(dots[0], dots[1]) == slope(dots[2], dots[3]) { return 1 }
+    if slope(dots[0], dots[2]) == slope(dots[1], dots[3]) { return 1 }
+    if slope(dots[0], dots[3]) == slope(dots[1], dots[2]) { return 1 }
     
     return 0
 }
