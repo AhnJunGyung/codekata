@@ -14,12 +14,11 @@ func solution(_ s:String) -> [Int] {
     for (index, char) in s.enumerated() {
         // 앞에 글자가 있을때
         if let frontWordIndex = dic[char] {
-            dic[char] = index
             result.append(index - frontWordIndex)
         } else { // 앞에 글자가 없을때
             result.append(-1)
-            dic[char] = index
         }
+        dic[char] = index
     }
     
     return result
