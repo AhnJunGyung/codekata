@@ -19,7 +19,7 @@ func solution(_ k:Int, _ score:[Int]) -> [Int] {
             hallOfFame.sort()
             
             if hallOfFame[0] < point {
-                hallOfFame.remove(at: 0)
+                hallOfFame.removeFirst()
                 hallOfFame.append(point)
             }
         }
