@@ -10,7 +10,7 @@ func solution(_ k:Int, _ m:Int, _ score:[Int]) -> Int {
     1. score 내림차순 정렬
     2. 사과 상자 계산(p * m) : m으로 나눴을때 나머지가 안나올때 까지 수행
     3. 상자 계산값 sum
-    4. sum 리턴
+    4. sum 리턴x
     */
     
     let scoreCopy = score.sorted(by: >)
