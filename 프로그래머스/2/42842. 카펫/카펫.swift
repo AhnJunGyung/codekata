@@ -28,11 +28,9 @@ func solution(_ brown:Int, _ yellow:Int) -> [Int] {
     result.append(sum / sqrt)
     result.append(sqrt)
     
-    //검증 코드 필요 -> width, height에 맞는 배열 생성하고 만들어보면서 틀리면 break 맞으면 리턴
-    //width, height 쌍을 약수로 미리 배열로 만들기
+    //검증 코드 필요
+    //width, height 쌍을 약수로 파악
     // 검증 : brown = (w * 2) + (h - 2) * 2
-    var tuple: [(Int, Int)] = []
-
     for i in 3...sqrt {
         
         if sum % i == 0 {
@@ -47,7 +45,6 @@ func solution(_ brown:Int, _ yellow:Int) -> [Int] {
                 if ((sum / i) * 2) + (i - 2) * 2 == brown {
                     return [sum / i, i]
                 }
-                tuple.append((sum / i, i))
             }
         }
     }
